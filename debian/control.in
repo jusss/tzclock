@@ -1,0 +1,16 @@
+Source: @PACKAGE@
+Section: x11
+Priority: extra
+Maintainer: Chris Knight (Developer) <chris@theknight.co.uk>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev
+Standards-Version: 3.9.3
+Homepage: www.tzclock.org
+
+Package: @PACKAGE@
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Cairo Clock to display the time around the world
+ GTK/Cairo Clock that can display the time around the world.  It supports
+ multiple faces showing different time zones.  There is also a stopwatch
+ that is accurate to a tenth of a second.  Plus many other nice features
+ for you to discover.
