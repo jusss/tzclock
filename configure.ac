@@ -3,7 +3,7 @@
 #
 AC_PREREQ(2.59)
 AC_INIT(TzClock, 3.0.4, chris@theknight.co.uk)
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([subdir-objects])
 AC_CONFIG_SRCDIR([src/TzClock.c])
 AC_CONFIG_HEADER([config.h])
 
