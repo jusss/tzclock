@@ -387,8 +387,7 @@ int buildAreaInfo (void *areaInfoList)
 	{
 		int swapped = 0, i;
 		menuSize = queueGetItemCount(areaInfo -> subAreaList) + queueGetItemCount(areaInfo -> cityList) + 2;
-		
-		
+				
 		for (i = 0; areaSwap[i]; i += 2)
 		{
 			if (strcmp (areaInfo -> areaName, areaSwap[i]) == 0)
