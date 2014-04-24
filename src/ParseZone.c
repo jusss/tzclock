@@ -385,8 +385,24 @@ int buildAreaInfo (void *areaInfoList)
 	 *------------------------------------------------------------------------------------------------*/
 	while ((areaInfo = (AREAINFO *)queueGet (areaInfoList)) != NULL)
 	{
+		int swapped = 0, i;
 		menuSize = queueGetItemCount(areaInfo -> subAreaList) + queueGetItemCount(areaInfo -> cityList) + 2;
-		menuDesc -> menuName = tidyName (areaInfo -> areaName);
+		
+		
+		for (i = 0; areaSwap[i]; i += 2)
+		{
+			if (strcmp (areaInfo -> areaName, areaSwap[i]) == 0)
+			{
+				menuDesc -> menuName = tidyName (areaSwap[i + 1]);
+				swapped = 1;
+				break;
+			}
+		}
+		if (!swapped)
+		{
+			menuDesc -> menuName = tidyName (areaInfo -> areaName);
+		}
+		
 		menuDesc -> subMenuDesc = menuSubDesc = (MENU_DESC *)malloc (menuSize * sizeof (MENU_DESC));
 		memset (menuSubDesc, 0, menuSize * sizeof (MENU_DESC));
 		menuDesc -> param = 0;
@@ -450,19 +466,9 @@ int buildAreaInfo (void *areaInfoList)
  *----------------------------------------------------------------------------------------------------*/
 /**
  *  @brief .
- *  @param fixedMenuItems .
  *  @result .
  */
-int parseZone (void) /**********************************************************************************************************************
- *                                                                                                                    *
- *  P A R S E  Z O N E                                                                                                *
- *  ==================                                                                                                *
- *                                                                                                                    *
- **********************************************************************************************************************/
-/**
- *  @brief .
- *  @result .
- */
+int parseZone (void)
 {
 	FILE *inFile;
 	int retn = 0, i;
@@ -483,14 +489,6 @@ int parseZone (void) /**********************************************************
 			
 			if (getAreaAndCity (inBuffer, area, subArea, city))
 			{
-				for (i = 0; areaSwap[i]; i += 2)
-				{
-					if (strcmp (area, areaSwap[i]) == 0)
-					{
-						strcpy (area, areaSwap[i + 1]);
-						break;
-					}
-				}
 				addAreaAndCity (areaInfoList, area, subArea, city);
 			}
 		}
