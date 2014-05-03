@@ -57,6 +57,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING AUTHORS
 
 %changelog
+* Fri May 2 2014 Chris Knight <chris@theknight.co.uk> 3.0.5-1
+- Fixed problems with the ocean time zones.
+
 * Sun Dec 29 2013 Chris Knight <chris@theknight.co.uk> 3.0.4-1
 - Compile clean on Fedora 20, added gradient to face.
 
