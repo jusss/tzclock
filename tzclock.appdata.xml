@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Chris Knight <chris@theknight.co.uk> -->
+<application>
+ <id type="desktop">txclock.desktop</id>
+ <licence>CC0-1.0</licence>
+ <name>Timezone Clock</name>
+ <summary>Show time around the world</summary>
+ <description>
+  <p>
+    TzClock is a analog Clock that can display the time around the world. It supports multiple 
+    faces showing different time zones. There is a stopwatch function, an alarm and many other 
+    nice features for you to discover.
+  </p>
+ </description>
+ <screenshots>
+  <screenshot type="default" width="800" height="800">http://theknight.co.uk/image/screenShot.png</screenshot>
+ </screenshots>
+ <url type="homepage">http://www.tzclock.org</url>
+ <updatecontact>chris@theknight.co.uk</updatecontact>
+</application>
