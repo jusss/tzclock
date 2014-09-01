@@ -1632,10 +1632,6 @@ clockTickCallback (gpointer data)
 		if (drawingArea)
 		{
 			gtk_widget_queue_draw (drawingArea);
-/*
-			GdkWindow *window = gtk_widget_get_parent_window (drawingArea);
-			gdk_window_invalidate_rect (GDK_WINDOW(window), NULL, TRUE);
-*/
 		}
 	}
 	return TRUE;
