@@ -2666,7 +2666,7 @@ void loadDateFormat (char *newFormat)
 void loadAlarmInfo (int face, char *buff)
 {
 	int alHour = 0, alMin = 0, i = 0, j = 0, m = 0;
-	char msg[41];
+	char msg[41] = "";
 		
 	while (buff[i] && m < 3)
 	{
