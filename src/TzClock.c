@@ -990,7 +990,8 @@ alarmCallback (guint data)
 	gtk_box_pack_start (GTK_BOX (hbox), vbox2, FALSE, TRUE, 0);
 
 	label = gtk_label_new (_("Hour :"));
-	gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
+//	gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
+	gtk_widget_set_halign (label, GTK_ALIGN_START);
 	gtk_box_pack_start (GTK_BOX (vbox2), label, FALSE, TRUE, 0);
 
 	adj = (GtkAdjustment *) gtk_adjustment_new 
@@ -1013,7 +1014,8 @@ alarmCallback (guint data)
 	gtk_box_pack_start (GTK_BOX (hbox), vbox2, FALSE, TRUE, 5);
 
 	label = gtk_label_new (_("Min :"));
-	gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
+//	gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
+	gtk_widget_set_halign (label, GTK_ALIGN_START);
 	gtk_box_pack_start (GTK_BOX (vbox2), label, FALSE, TRUE, 0);
 
 	adj = (GtkAdjustment *) gtk_adjustment_new
@@ -1036,7 +1038,8 @@ alarmCallback (guint data)
 	gtk_box_pack_start (GTK_BOX (vbox1), vbox2, TRUE, TRUE, 0);
 
 	label = gtk_label_new (_("Show message :"));
-	gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
+//	gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
+	gtk_widget_set_halign (label, GTK_ALIGN_START);
 	gtk_box_pack_start (GTK_BOX(vbox2), label, FALSE, TRUE, 0);
 
 	entry1 = gtk_entry_new ();
@@ -1046,7 +1049,8 @@ alarmCallback (guint data)
     gtk_box_pack_start (GTK_BOX(vbox2), entry1, TRUE, TRUE, 0);
 
 	label = gtk_label_new (_("Run command :"));
-	gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
+//	gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
+	gtk_widget_set_halign (label, GTK_ALIGN_START);
 	gtk_box_pack_start (GTK_BOX(vbox2), label, FALSE, TRUE, 0);
 
 	entry2 = gtk_entry_new ();
