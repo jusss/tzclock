@@ -2460,7 +2460,7 @@ void getTheFaceTime (FACE_SETTINGS *faceSetting, time_t *t, struct tm *tm)
 	{
 		setenv ("TZ", timeZones[timeZone].envName, 1);
 	} 
-	localtime (t);
+	tzset();
 	localtime_r (t, tm);
 }			
 
