@@ -1114,7 +1114,7 @@ aboutCallback (guint data)
 			"artists", artists,
 			"authors", authors,
 			"comments", comment,
-			"copyright", "Copyright © 2005 - 2014 Chris Knight <chris@theknight.co.uk>",
+			"copyright", "Copyright © 2005 - 2015 Chris Knight <chris@theknight.co.uk>",
 			"logo", defaultIcon,
 //			"logo-icon-name", "tzclock",
 			"version", verString,
